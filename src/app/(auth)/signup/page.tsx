@@ -1,10 +1,11 @@
 import { GoogleSignInButton } from "@/components/auth/GoogleSignInButton";
+import { EmailSignUp } from "@/components/auth/EmailSignUp";
 import { AuthCard } from "@/components/auth/AuthCard";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 
-export default async function LoginPage() {
+export default async function SignUpPage() {
   const supabase = await createClient();
   const { data: { session } } = await supabase.auth.getSession();
 
@@ -14,13 +15,13 @@ export default async function LoginPage() {
 
   return (
     <AuthCard
-      title="Welcome back"
-      subtitle="Sign in to your Consult Dave account"
+      title="Create your account"
+      subtitle="Join Consult Dave today"
       footer={
         <>
-          Don&apos;t have an account?{" "}
-          <Link href="/signup" className="font-semibold text-primary hover:text-primary/80 transition-colors">
-            Sign up
+          Already have an account?{" "}
+          <Link href="/login" className="font-semibold text-primary hover:text-primary/80 transition-colors">
+            Sign in
           </Link>
         </>
       }
@@ -31,12 +32,10 @@ export default async function LoginPage() {
           <div className="w-full border-t border-border" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-white px-2 text-muted-foreground">or continue with</span>
+          <span className="bg-white px-2 text-muted-foreground">or sign up with email</span>
         </div>
       </div>
-      <div className="text-center text-xs text-muted-foreground">
-        By signing in, you agree to our Terms of Service and Privacy Policy.
-      </div>
+      <EmailSignUp />
     </AuthCard>
   );
 }
