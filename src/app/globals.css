@@ -1,0 +1,67 @@
+/* ============================================================================
+   Global Styles — with animations & responsive enhancements
+   ============================================================================ */
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --accent: #f59e0b;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --destructive: #ef4444;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+   Smooth scrolling for the whole page.
+   Only applies when user hasn't set prefers-reduced-motion.
+*/
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 
+   Responsive images: prevent overflow on small screens.
+   Any <img> inside a container will shrink to fit.
+*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 
+   Better touch targets on mobile.
+   Buttons and links should be at least 44px tall for easy tapping.
+*/
+@media (max-width: 640px) {
+  button,
+  a {
+    min-height: 44px;
+  }
+}
