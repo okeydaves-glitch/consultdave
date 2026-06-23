@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SafeRent — Vehicle Rentals & Safety Equipment for Nigerian Businesses
 
-## Getting Started
+A full-stack B2C web platform combining daily car rentals and industrial safety equipment e-commerce. Built with Next.js and Supabase.
 
-First, run the development server:
+**Serving:** Lagos, Abuja, Port Harcourt
+
+---
+
+## Tech Stack
+
+| Frontend | Backend / Infrastructure |
+|----------|------------------------|
+| Next.js 16 (App Router) | Supabase (PostgreSQL + Auth + Storage) |
+| TypeScript | Paystack (payments) |
+| Tailwind CSS v4 | Vercel (hosting) |
+| Framer Motion (animations) | SendGrid (email — optional) |
+| TanStack Query (data fetching) | |
+| Zustand (client state) | |
+| React Hook Form + Zod (forms) | |
+
+## Quick Start
 
 ```bash
+# 1. Install dependencies
+npm install
+
+# 2. Copy environment variables
+cp .env.example .env.local
+
+# 3. Set up Supabase
+#    - Create a project at supabase.com
+#    - Run supabase/migration.sql in SQL Editor
+#    - Enable Google OAuth in Auth → Providers
+#    - Create storage buckets: car-images, equipment-images, avatars
+#    - Copy your URL + anon key + service_role key to .env.local
+
+# 4. Run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                     # Next.js App Router pages + API routes
+│   ├── cars/                # Car listing, detail, booking
+│   ├── equipment/           # Equipment listing, detail
+│   ├── dashboard/           # User dashboard (rentals, purchases, profile)
+│   ├── admin/               # Admin panel (cars, equipment, bookings, orders)
+│   ├── login/               # Google OAuth login
+│   └── api/                 # All backend API route handlers
+├── components/
+│   ├── shared/              # Button, Input, Modal, Loading, Toast, etc.
+│   ├── layout/              # Navbar, Footer
+│   ├── auth/                # GoogleSignInButton, AuthGuard
+│   ├── car/                 # CarCard, CarFilter, BookingForm
+│   └── equipment/           # EquipmentCard, EquipmentFilter
+└── lib/
+    ├── supabase/            # Browser, server, admin, middleware clients
+    ├── api.ts               # API client wrapper
+    ├── hooks.ts             # Custom React hooks
+    ├── utils.ts             # Utilities + constants
+    ├── animations.ts        # Framer Motion variants
+    └── providers.tsx        # QueryClient + Supabase providers
+```
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+### MVP Complete
+- **Car rentals** — Browse, filter by city/category, view details, book with date picker
+- **Safety equipment** — Browse catalog, filter by category, search, view product details
+- **Google OAuth** — Sign in with Google account via Supabase Auth
+- **Shopping cart** — Add/remove equipment items (Zustand + localStorage)
+- **User dashboard** — View rental history, purchase history, profile, saved addresses
+- **Admin panel** — Manage cars, equipment, bookings, orders, view analytics
+- **Paystack payments** — Initialize payment, verify callback, webhook handler
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Animations
+- Page transitions with fade + slide
+- Stagger card entrance on listing pages
+- Scroll-triggered reveals on landing page
+- Card hover lift + image zoom
+- Button press feedback
+- Mobile menu slide animation
+- Toast notifications
+- Modal scale entrance
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Database
 
-## Deploy on Vercel
+PostgreSQL managed through Supabase with 9 tables:
+`profiles`, `addresses`, `cars`, `bookings`, `equipment`, `orders`, `order_items`, `payments`, `admin_users`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Row Level Security (RLS) ensures users can only access their own data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Documentation
+
+See [DOCUMENTATION.md](DOCUMENTATION.md) for the full project guide covering:
+- Architecture deep-dive
+- Every file explained
+- API reference (all endpoints)
+- Database schema details
+- Deployment checklist
+- Common questions
+
+## License
+
+Private — all rights reserved.
