@@ -1,6 +1,9 @@
 // ============================================================================
 // Checkout Page
 // ============================================================================
+
+// Must be dynamic because AuthGuard uses Supabase client
+export const dynamic = "force-dynamic";
 // Where users review their order, enter shipping details, and pay.
 //
 // Flow:

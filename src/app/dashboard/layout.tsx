@@ -1,6 +1,9 @@
 // ============================================================================
 // Dashboard Layout
 // ============================================================================
+
+// Must be dynamic because AuthGuard uses Supabase client
+export const dynamic = "force-dynamic";
 // Wraps all dashboard pages (/dashboard/*) with:
 // - AuthGuard (ensures user is logged in)
 // - A sidebar with navigation links
