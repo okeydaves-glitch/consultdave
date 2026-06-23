@@ -1,19 +1,17 @@
-/* ============================================================================
-   Global Styles — with animations & responsive enhancements
-   ============================================================================ */
-
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --primary: #2563eb;
+  --background: #fafafa;
+  --foreground: #111111;
+  --primary: #2d36f3;
   --primary-foreground: #ffffff;
-  --accent: #f59e0b;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --border: #e2e8f0;
+  --secondary: #4a56ff;
+  --accent: #2d36f3;
+  --muted: #f5f5f5;
+  --muted-foreground: #555555;
+  --border: #e8e8e8;
   --destructive: #ef4444;
+  --card: #ffffff;
 }
 
 @theme inline {
@@ -21,44 +19,33 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
 
-/* 
-   Smooth scrolling for the whole page.
-   Only applies when user hasn't set prefers-reduced-motion.
-*/
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
 }
 
-/* 
-   Responsive images: prevent overflow on small screens.
-   Any <img> inside a container will shrink to fit.
-*/
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* 
-   Better touch targets on mobile.
-   Buttons and links should be at least 44px tall for easy tapping.
-*/
 @media (max-width: 640px) {
   button,
   a {

@@ -19,6 +19,8 @@
 
 **SafeRent** is a B2C web platform that combines vehicle rental and industrial safety equipment e-commerce. It serves businesses in Nigeria (Lagos, Abuja, Port Harcourt) who need to rent cars daily and purchase safety equipment.
 
+**Live site:** [consultdave.vercel.app](https://consultdave.vercel.app/)
+
 ### Core Features (MVP)
 - **Daily car rentals** — Sedans, SUVs, vans, and trucks available by the day
 - **Safety equipment marketplace** — PPE, fall protection, respiratory gear, and more

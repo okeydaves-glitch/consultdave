@@ -4,6 +4,8 @@ A full-stack B2C web platform combining daily car rentals and industrial safety 
 
 **Serving:** Lagos, Abuja, Port Harcourt
 
+**Live site:** [consultdave.vercel.app](https://consultdave.vercel.app/)
+
 ---
 
 ## Tech Stack
