@@ -3,7 +3,7 @@ import { ServicesSection } from "@/components/home/ServicesSection";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { StatisticsSection } from "@/components/home/StatisticsSection";
 import { CarRentalShowcase } from "@/components/home/CarRentalShowcase";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { SafetySection } from "@/components/home/SafetySection";
 import { ContactBanner } from "@/components/home/ContactBanner";
 
 export default function HomePage() {
@@ -14,7 +14,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <StatisticsSection />
       <CarRentalShowcase />
-      <TestimonialsSection />
+      <SafetySection />
       <ContactBanner />
     </div>
   );

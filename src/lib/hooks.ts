@@ -233,6 +233,6 @@ export function useCreateOrder() {
 //       clearCart: () => set({ items: [] }),
 //       total: () => get().items.reduce((sum, i) => sum + i.price * i.quantity, 0),
 //     }),
-//     { name: "saferent-cart" }
+//     { name: "consultdave-cart" }
 //   )
 // );

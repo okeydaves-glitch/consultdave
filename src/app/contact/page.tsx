@@ -18,16 +18,16 @@ export default function ContactPage() {
         <div className="space-y-4">
           <div>
             <h3 className="font-semibold">Email</h3>
-            <p className="text-sm text-muted-foreground">hello@saferent.com</p>
+            <p className="text-sm text-muted-foreground">hello@consultdave.com</p>
           </div>
           <div>
             <h3 className="font-semibold">Phone</h3>
-            <p className="text-sm text-muted-foreground">+234 800 SAFERENT</p>
+            <p className="text-sm text-muted-foreground">+234 800 CONSULT</p>
           </div>
           <div>
             <h3 className="font-semibold">Locations</h3>
             <p className="text-sm text-muted-foreground">
-              Lagos, Abuja, Port Harcourt
+              Lagos, Abuja, Rivers, Imo
             </p>
           </div>
           <div>

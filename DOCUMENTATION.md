@@ -21,9 +21,9 @@
 
 **Live site:** [consultdave.vercel.app](https://consultdave.vercel.app/)
 
-### Core Features (MVP)
-- **Daily car rentals** — Sedans, SUVs, vans, and trucks available by the day
-- **Safety equipment marketplace** — PPE, fall protection, respiratory gear, and more
+### Core Features
+- **Daily car rentals** — Buses, SUVs, and trucks available by the day across Lagos, Abuja, Rivers, Imo
+- **Safety equipment marketplace** — PPE, fire equipment, safety training, and site surveying
 - **Google OAuth login** — Sign in with your Google account
 - **User dashboard** — View rental and purchase history
 - **Admin panel** — Manage inventory, view bookings and orders
@@ -185,7 +185,7 @@ consultdave/
 ├── src/
 │   ├── app/                          # Next.js App Router pages
 │   │   ├── layout.tsx                # Root layout (Navbar + Footer + Providers)
-│   │   ├── page.tsx                  # Landing page
+│   │   ├── page.tsx                  # Landing page (7 sections stacked)
 │   │   ├── globals.css               # Global styles & CSS variables
 │   │   ├── not-found.tsx             # 404 page
 │   │   │
@@ -308,6 +308,28 @@ consultdave/
 ├── .env.example               # Environment variable template
 └── DOCUMENTATION.md           # This file
 ```
+
+### Home Page Sections (stacked in order)
+
+The landing page (`src/app/page.tsx`) composes 7 sections:
+
+| # | Section | Layout | Key Content |
+|---|---------|--------|-------------|
+| 1 | `HeroSection` | Full-viewport 2-col grid | Badge, headline, paragraph, 2 CTAs, placeholder image, WaveDivider |
+| 2 | `ServicesSection` | 3-col card grid | 6 navy gradient cards with icon hover fill (Safety Consultancy, Fire Safety, Equipment Supply, Site Surveying, Safety Training, Car Rentals) |
+| 3 | `WhyChooseUs` | 3-col card grid | 6 benefit cards matching ServicesSection style (Fast Response, Experienced Techs, Safety Focus, Transparent Pricing, Nationwide Coverage, Certified Equipment) |
+| 4 | `StatisticsSection` | 4-col counter grid | Animated counters: 500+ Projects, 100% Satisfaction, 24/7 Support, 10+ Years |
+| 5 | `CarRentalShowcase` | 2-col (image left, text right) | 4 feature cards, floating badges, CTAs (Book Now / Request Quote), cross-link to equipment |
+| 6 | `SafetySection` | 2-col (text left, image right) | 4 feature cards, floating badges, CTAs (Shop Equipment / Request Consultation), cross-link to rentals |
+| 7 | `ContactBanner` | Large gradient card, 2-col | "Let's Talk Safety" CTA left, 4 contact method cards right (WhatsApp, Instagram, Phone, Email) |
+
+**Design system across all sections:**
+- Cards: `linear-gradient(135deg, #1a1a2e → #0f0f1a)`, `rounded-2xl`/`rounded-3xl`, `p-8`
+- Icons: `h-14 w-14 rounded-2xl` containers, `bg-[var(--primary)]/20` → fills to `bg-[var(--primary)]` on hover, icon turns white
+- Section padding: `py-20 lg:py-32`, container `max-w-7xl px-4 sm:px-6 lg:px-12`
+- Section backgrounds: use CSS variables (`--hero-bg`, `--section-alt`, `--navy`) or inline navy gradients
+- Animations: Framer Motion `whileInView` with `opacity + y + scale` pop entrance, `transition-all duration-200` on hovers
+- Responsive: `sm:` / `lg:` breakpoints on grids, padding, icon sizes; blur circles scaled down on mobile
 
 ---
 

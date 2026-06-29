@@ -40,7 +40,7 @@ export interface Address {
 export interface Car {
   id: string;
   name: string;
-  category: "sedan" | "suv" | "van" | "truck";
+  category: "bus" | "suv" | "truck";
   year: number;
   mileage: number;
   fuel_type: "petrol" | "diesel" | "hybrid";

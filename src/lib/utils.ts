@@ -82,16 +82,16 @@ export function calculateBookingDays(checkIn: string, checkOut: string): number 
 export const CITIES = [
   { value: "lagos", label: "Lagos" },
   { value: "abuja", label: "Abuja" },
-  { value: "port_harcourt", label: "Port Harcourt" },
+  { value: "rivers", label: "Rivers" },
+  { value: "imo", label: "Imo" },
 ] as const;
 
 /**
  * CAR_CATEGORIES - Types of cars available for rent
  */
 export const CAR_CATEGORIES = [
-  { value: "sedan", label: "Sedan" },
+  { value: "bus", label: "Bus" },
   { value: "suv", label: "SUV" },
-  { value: "van", label: "Van" },
   { value: "truck", label: "Truck" },
 ] as const;
 

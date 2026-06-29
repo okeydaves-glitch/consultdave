@@ -1,7 +1,7 @@
 // ============================================================================
 // About Page
 // ============================================================================
-// Tells visitors about the SafeRent company and its mission.
+// Tells visitors about the Consult Dave company and its mission.
 //
 // Route: /about
 // ============================================================================
@@ -11,11 +11,11 @@ import { CITIES } from "@/lib/utils";
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold">About SafeRent</h1>
+      <h1 className="text-3xl font-bold">About Consult Dave</h1>
 
       <section className="mt-8 space-y-4 text-muted-foreground">
         <p>
-          SafeRent is a Nigerian platform that makes it easy for businesses to
+          Consult Dave is a Nigerian platform that makes it easy for businesses to
           rent vehicles and purchase industrial safety equipment. We combine
           two essential business needs — transportation and workplace safety —
           into one seamless online experience.
@@ -39,7 +39,7 @@ export default function AboutPage() {
 
       <section className="mt-12">
         <h2 className="text-2xl font-semibold">Our Cities</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-3">
+        <div className="mt-4 grid gap-4 grid-cols-2 sm:grid-cols-4">
           {CITIES.map((city) => (
             <div
               key={city.value}

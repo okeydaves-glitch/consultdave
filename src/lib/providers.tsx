@@ -16,6 +16,7 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState, type ReactNode } from "react";
+import { ThemeProvider } from "@/components/shared/ThemeProvider";
 
 export function Providers({ children }: { children: ReactNode }) {
   // QueryClient manages all data fetching for the app.
@@ -39,7 +40,9 @@ export function Providers({ children }: { children: ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {children}
+      <ThemeProvider>
+        {children}
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

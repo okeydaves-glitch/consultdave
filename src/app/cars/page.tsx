@@ -40,7 +40,7 @@ export default async function CarsPage({ searchParams }: CarsPageProps) {
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-bold">Rent a Car</h1>
         <p className="mt-2 text-muted-foreground">
-          Browse our available vehicles in Lagos, Abuja, and Port Harcourt.
+          Browse our available vehicles in Lagos, Abuja, Rivers, and Imo.
         </p>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-[250px_1fr]">

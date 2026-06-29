@@ -16,10 +16,10 @@ export async function Navbar() {
   const isLoggedIn = !!session?.user;
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 border-b border-border/50">
+    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[var(--navbar-bg)] border-b border-[var(--border)]/50">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-12">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-extrabold text-primary tracking-tight">Consult Dave</span>
+          <span className="text-xl font-extrabold text-[var(--primary)] tracking-tight">Consult Dave</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -27,7 +27,7 @@ export async function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-semibold text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
             >
               {link.label}
             </Link>

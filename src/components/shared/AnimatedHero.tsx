@@ -32,7 +32,7 @@ export function AnimatedHero() {
             className="mt-6 text-lg text-muted-foreground"
           >
             One platform for daily car rentals and industrial safety gear.
-            Serving Lagos, Abuja, and Port Harcourt.
+            Serving Lagos, Abuja, Rivers, and Imo.
           </motion.p>
 
           {/* Buttons — fade in last */}

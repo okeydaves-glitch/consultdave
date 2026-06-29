@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Consult Dave",
   },
   description:
-    "Your trusted safety consultant in Nigeria. Fire safety installation, equipment supply, site surveying, and premium car rentals. Serving Lagos, Abuja, and Port Harcourt.",
+    "Your trusted safety consultant in Nigeria. Fire safety installation, equipment supply, site surveying, and premium car rentals. Serving Lagos, Abuja, Rivers, and Imo.",
 };
 
 export default function RootLayout({
