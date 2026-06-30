@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #111111;
+  --background: #f2f2f5;
+  --foreground: #000000;
   --primary: #5555ff;
   --primary-foreground: #ffffff;
   --secondary: #1a1a2e;
   --accent: #5555ff;
-  --muted: #f5f5f5;
-  --muted-foreground: #666666;
-  --border: #e8e8e8;
+  --muted: #eaeaea;
+  --muted-foreground: #555555;
+  --border: #d4d4d4;
   --destructive: #ef4444;
   --card: #ffffff;
   --navy: #1a1a2e;
   --electric-blue: #5555ff;
   --navbar-bg: rgba(255, 255, 255, 0.9);
   --hero-bg: #ffffff;
-  --section-alt: #fafafa;
-  --card-shadow: rgba(0, 0, 0, 0.08);
+  --section-alt: #f2f2f5;
+  --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
 .dark {
