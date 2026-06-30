@@ -42,13 +42,12 @@ export function ServicesSection() {
               whileHover={{ y: -6 }}
               className="group rounded-3xl p-8 transition-all duration-200 flex flex-col"
               style={{
-                background: "linear-gradient(135deg, #ede7ff 0%, #ddd5f5 100%)",
-                boxShadow: "0 20px 60px rgba(180, 160, 230, 0.3)",
+                background: "var(--card-gradient)",
+                boxShadow: "var(--card-gradient-shadow)",
               }}
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--primary)]/20 group-hover:bg-[var(--primary)] transition-all duration-200 shrink-0">
                 <service.icon className="h-7 w-7 text-[var(--primary)] group-hover:text-white transition-colors duration-200" />
-              
               </div>
               <h3 className="mt-6 text-xl font-bold text-[var(--foreground)]">{service.title}</h3>
               <p className="mt-2 text-[var(--muted-foreground)] leading-relaxed flex-1">{service.description}</p>

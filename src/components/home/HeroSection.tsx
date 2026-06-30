@@ -80,7 +80,7 @@ export function HeroSection() {
               transition={{ duration: 0.35, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
               className="relative z-10 w-full max-w-xl aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl rotate-[2deg] lg:rotate-[3deg]"
               style={{
-                background: "linear-gradient(135deg, #ede7ff 0%, #ddd5f5 100%)",
+                background: "var(--card-gradient)",
               }}
             >
               <div className="w-full h-full flex items-center justify-center">

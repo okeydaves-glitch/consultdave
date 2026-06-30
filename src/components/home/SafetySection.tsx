@@ -13,7 +13,7 @@ const safetyFeatures = [
 
 export function SafetySection() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-[var(--section-alt)]">
+    <section className="relative py-20 lg:py-32 overflow-hidden" style={{ background: "var(--section-gradient)" }}>
       <div className="absolute inset-0 opacity-[0.04]">
         <div className="absolute top-20 left-40 w-96 h-96 rounded-full bg-[var(--primary)] blur-3xl" />
         <div className="absolute bottom-40 right-20 w-64 h-64 rounded-full bg-[var(--primary)] blur-3xl" />
@@ -43,7 +43,7 @@ export function SafetySection() {
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: i * 0.05 }}
-                  className="group rounded-2xl p-3 sm:p-4 transition-all duration-200 bg-[var(--card)] shadow-sm"
+                  className="group rounded-2xl p-3 sm:p-4 transition-all duration-200" style={{ background: "var(--card-subtle)" }}
                 >
                   <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-[var(--primary)]/20 group-hover:bg-[var(--primary)] transition-all duration-200 shrink-0">
                     <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-[var(--primary)] group-hover:text-white transition-colors duration-200" />

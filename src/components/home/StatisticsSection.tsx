@@ -36,7 +36,7 @@ function AnimatedCounter({ target, suffix = "", prefix = "" }: { target: number;
 
 export function StatisticsSection() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-[var(--section-alt)]">
+    <section className="relative py-20 lg:py-32 overflow-hidden" style={{ background: "var(--section-gradient-reverse)" }}>
       <div className="absolute inset-0 opacity-[0.04]">
         <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-[var(--primary)] blur-3xl" />
         <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-[var(--primary)] blur-3xl" />
