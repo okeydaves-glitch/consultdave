@@ -185,8 +185,9 @@ consultdave/
 ├── src/
 │   ├── app/                          # Next.js App Router pages
 │   │   ├── layout.tsx                # Root layout (Navbar + Footer + Providers)
-│   │   ├── page.tsx                  # Landing page (7 sections stacked)
+│   │   ├── page.tsx                  # Landing page (6 sections stacked)
 │   │   ├── globals.css               # Global styles & CSS variables
+│   │   ├── icon.svg                  # SVG favicon (power icon)
 │   │   ├── not-found.tsx             # 404 page
 │   │   │
 │   │   ├── (auth)/login/page.tsx     # Login page
@@ -269,6 +270,7 @@ consultdave/
 │   │   ├── shared/                    # Reusable UI components
 │   │   │   ├── Button.tsx
 │   │   │   ├── Input.tsx
+│   │   │   ├── Logo.tsx               # SVG power-icon brand logo
 │   │   │   ├── Modal.tsx
 │   │   │   ├── Loading.tsx
 │   │   │   └── ErrorBoundary.tsx
@@ -311,23 +313,23 @@ consultdave/
 
 ### Home Page Sections (stacked in order)
 
-The landing page (`src/app/page.tsx`) composes 7 sections:
+The landing page (`src/app/page.tsx`) composes 6 sections:
 
 | # | Section | Layout | Key Content |
 |---|---------|--------|-------------|
-| 1 | `HeroSection` | Full-viewport 2-col grid | Badge, headline, paragraph, 2 CTAs, placeholder image, WaveDivider |
-| 2 | `ServicesSection` | 3-col card grid | 6 navy gradient cards with icon hover fill (Safety Consultancy, Fire Safety, Equipment Supply, Site Surveying, Safety Training, Car Rentals) |
+| 1 | `HeroSection` | Full-viewport 2-col grid | Logo, "Trusted Across Nigeria" badge, headline, paragraph, 2 CTAs, decorative gradient image, WaveDivider |
+| 2 | `ServicesSection` | 3-col card grid | 6 lavender gradient cards with icon hover fill (Safety Consultancy, Fire Safety, Equipment Supply, Site Surveying, Safety Training, Car Rentals) |
 | 3 | `WhyChooseUs` | 3-col card grid | 6 benefit cards matching ServicesSection style (Fast Response, Experienced Techs, Safety Focus, Transparent Pricing, Nationwide Coverage, Certified Equipment) |
-| 4 | `StatisticsSection` | 4-col counter grid | Animated counters: 500+ Projects, 100% Satisfaction, 24/7 Support, 10+ Years |
-| 5 | `CarRentalShowcase` | 2-col (image left, text right) | 4 feature cards, floating badges, CTAs (Book Now / Request Quote), cross-link to equipment |
-| 6 | `SafetySection` | 2-col (text left, image right) | 4 feature cards, floating badges, CTAs (Shop Equipment / Request Consultation), cross-link to rentals |
-| 7 | `ContactBanner` | Large gradient card, 2-col | "Let's Talk Safety" CTA left, 4 contact method cards right (WhatsApp, Instagram, Phone, Email) |
+| 4 | `CarRentalShowcase` | 2-col (image left, text right) | 4 feature cards, floating badges (50+ Vehicles, 5 stars), CTAs (Book Now / Request Quote), cross-link to equipment |
+| 5 | `SafetySection` | 2-col (text left, image right) | 4 feature cards, floating badges (Certified Gear, ISO Certified), CTAs (Shop Equipment / Request Consultation), cross-link to rentals |
+| 6 | `ContactBanner` | Large gradient card, 2-col | "Let's Talk Safety" CTA left, 4 contact method cards right (WhatsApp, Instagram, Phone, Email) |
 
 **Design system across all sections:**
-- Cards: `linear-gradient(135deg, #1a1a2e → #0f0f1a)`, `rounded-2xl`/`rounded-3xl`, `p-8`
+- Flash cards: `bg-card-gradient` / `bg-card-subtle` (light: lavender, dark: navy), `rounded-2xl`/`rounded-3xl`, `p-8`
+- Full-section backgrounds: `bg-section-gradient` / `bg-section-gradient-reverse` (light: lavender, dark: navy)
 - Icons: `h-14 w-14 rounded-2xl` containers, `bg-[var(--primary)]/20` → fills to `bg-[var(--primary)]` on hover, icon turns white
 - Section padding: `py-20 lg:py-32`, container `max-w-7xl px-4 sm:px-6 lg:px-12`
-- Section backgrounds: use CSS variables (`--hero-bg`, `--section-alt`, `--navy`) or inline navy gradients
+- Section backgrounds: use CSS variables (`--section-alt`, `bg-section-gradient`, `bg-section-gradient-reverse`)
 - Animations: Framer Motion `whileInView` with `opacity + y + scale` pop entrance, `transition-all duration-200` on hovers
 - Responsive: `sm:` / `lg:` breakpoints on grids, padding, icon sizes; blur circles scaled down on mobile
 
@@ -563,6 +565,106 @@ PAYSTACK_SECRET_KEY=
 NEXT_PUBLIC_SITE_URL=
 NEXT_PUBLIC_ENVIRONMENT=production
 ```
+
+---
+
+---
+
+## 11. Design System & Theming
+
+### Color Scheme
+
+The site uses CSS custom properties for theming with a **light mode** (`:root`) and **dark mode** (`.dark` class) variant. The `.dark` class is toggled on `<html>` by `ThemeProvider.tsx`.
+
+#### Light Mode (`:root`)
+
+| Variable | Value | Purpose |
+|----------|-------|---------|
+| `--background` | `#f5f3ff` | Page background (soft lavender) |
+| `--foreground` | `#2d1b69` | Primary text (dark purple) |
+| `--primary` | `#5555ff` | Brand/accent (electric blue) |
+| `--primary-foreground` | `#ffffff` | Text on primary backgrounds |
+| `--secondary` | `#2d1b69` | Secondary brand color |
+| `--accent` | `#5555ff` | Accent/highlight color |
+| `--muted` | `#eeebf8` | Muted/skeleton backgrounds |
+| `--muted-foreground` | `#8a7bbf` | Secondary/subtle text |
+| `--border` | `#ddd6f0` | Borders, dividers |
+| `--card` | `#ffffff` | Card surface (white) |
+| `--navy` | `#2d1b69` | Dark sections (footer) |
+| `--section-alt` | `#f0edf9` | Alternating section backgrounds |
+
+#### Dark Mode (`.dark`)
+
+| Variable | Value | Purpose |
+|----------|-------|---------|
+| `--background` | `#0a0a12` | Page background |
+| `--foreground` | `#f0f0f0` | Primary text |
+| `--primary` | `#6b6bff` | Brand/accent (brighter blue) |
+| `--card` | `#12121e` | Card surface |
+| `--navy` | `#0f0f1a` | Dark sections (footer) |
+| `--section-alt` | `#0f0f1a` | Alternating section backgrounds |
+
+### Gradient Utility Classes
+
+Custom utility classes in `globals.css` provide theme-aware gradients:
+
+| Class | Light Mode | Dark Mode |
+|-------|-----------|-----------|
+| `bg-card-gradient` | `#ede7ff → #ddd5f5` | `#1a1a2e → #0f0f1a` |
+| `bg-card-subtle` | `rgba(237,231,255,...)` | `rgba(26,26,46,...)` |
+| `bg-section-gradient` | `#f0edf9 → #e8e0f5` | `#0f0f1a → #1a1a2e` |
+| `bg-section-gradient-reverse` | `#e8e0f5 → #f0edf9` | `#1a1a2e → #0f0f1a` |
+| `shadow-card-gradient` | lavender shadow | dark navy shadow |
+
+Used via Tailwind classes: `bg-card-gradient shadow-card-gradient`
+
+### Logo
+
+A reusable `Logo` component (`src/components/shared/Logo.tsx`) renders the brand as an SVG power-button icon with "Consult Dave" text.
+
+**Props:** `href?`, `size?` (`sm`/`md`/`lg`/`xl`), `color?` (`default`/`white`), `showText?`, `onClick?`
+
+**Placement:**
+- **Navbar** — `Logo href="/" size="md"` (desktop header, clickable home link)
+- **Mobile menu** — `Logo href="/" size="sm"` (top of mobile nav drawer)
+- **Hero section** — `Logo size="lg"` (before headline)
+- **Footer** — `Logo href="/" size="lg" color="white"` (first column)
+
+### Favicon
+
+An SVG favicon at `src/app/icon.svg` (32×32, power-icon design in brand blue) replaces the default `favicon.ico`. Next.js auto-detects it.
+
+---
+
+## 12. Changelog / Recent Changes
+
+### Session 1 — Theme Redesign & Logo Integration
+
+A comprehensive redesign of the light mode visual identity and addition of brand logo assets.
+
+#### Changes Made
+
+| # | Change | Files Affected | Details |
+|---|--------|---------------|---------|
+| 1 | **Light mode color overhaul** | `src/app/globals.css` | Changed from neutral grays (`#fafafa`, `#111111`) to a soft lavender palette (`#f5f3ff`, `#2d1b69`). All variables in `:root` are now purple/lavender tones instead of black/dark navy. |
+| 2 | **Card gradients converted to CSS variables** | `src/app/globals.css` | Added `--card-gradient`, `--card-subtle`, `--section-gradient`, `--section-gradient-reverse`, `--card-gradient-shadow` to both `:root` (lavender) and `.dark` (original dark navy). |
+| 3 | **Gradient utility classes** | `src/app/globals.css` | Created `.bg-card-gradient`, `.bg-card-subtle`, `.bg-section-gradient`, `.bg-section-gradient-reverse`, `.shadow-card-gradient` with `.dark` variants in `@layer utilities`. |
+| 4 | **Flash cards updated to lavender** | `ServicesSection.tsx`, `WhyChooseUs.tsx`, `ContactBanner.tsx` | Card backgrounds changed from hardcoded dark navy gradients to `bg-card-gradient` / `bg-card-subtle`. Text colors changed from `text-white` to `text-[var(--foreground)]` / `text-[var(--muted-foreground)]`. |
+| 5 | **Dark sections converted to gradient vars** | `SafetySection.tsx`, `CarRentalShowcase.tsx`, `StatisticsSection.tsx` | Section backgrounds changed from hardcoded dark gradients to `bg-section-gradient` / `bg-section-gradient-reverse`. Feature cards changed to `bg-card-subtle`. Text colors updated to theme variables. |
+| 6 | **Logo component created** | `src/components/shared/Logo.tsx` (NEW) | SVG power-button icon + "Consult Dave" text, responsive sizes, white variant for dark backgrounds. |
+| 7 | **Logo integrated into layout** | `Navbar.tsx`, `NavbarClient.tsx`, `Footer.tsx`, `HeroSection.tsx` | Replaced plain text "Consult Dave" with `<Logo>` component in header, mobile menu, footer, and hero section. |
+| 8 | **SVG favicon created** | `src/app/icon.svg` (NEW), removed `src/app/favicon.ico` | Power-icon favicon in brand blue, auto-detected by Next.js. |
+| 9 | **AuthCard updated to theme vars** | `AuthCard.tsx` | Changed `bg-white` → `bg-card`, `text-[#111111]` → `text-foreground`. |
+| 10 | **HeroSection placeholder gradient** | `HeroSection.tsx` | Image placeholder gradient updated to `bg-card-gradient`. |
+| 11 | **StatisticsSection removed** | `src/app/page.tsx` | Removed `StatisticsSection` import and rendering to eliminate the light-color section between "Why Trust Us" and "Car Rentals". |
+
+#### Design Rationale
+
+- **Lavender palette**: Creates a soft, approachable, modern feel while maintaining professionalism.
+- **White cards**: Card backgrounds `#ffffff` pop against the lavender page background `#f5f3ff`.
+- **Dark purple text**: `#2d1b69` provides strong readability without harsh black.
+- **Gradient CSS variables**: Theme-aware gradients ensure dark mode retains its original dark navy aesthetic.
+- **Logo**: SVG-based, resolution-independent, theme-aware (adapts to light/dark backgrounds).
 
 ---
 
