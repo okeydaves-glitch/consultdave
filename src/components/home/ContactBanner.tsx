@@ -14,8 +14,8 @@ export function ContactBanner() {
            transition={{ duration: 0.35 }}
           className="rounded-[40px] p-6 sm:p-10 lg:p-16 relative overflow-hidden"
           style={{
-            background: "linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%)",
-            boxShadow: "0 30px 80px rgba(26, 26, 46, 0.4)",
+            background: "linear-gradient(135deg, #ede7ff 0%, #ddd5f5 100%)",
+            boxShadow: "0 30px 80px rgba(180, 160, 230, 0.4)",
           }}
         >
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#5555ff]/10 blur-3xl" />
@@ -24,10 +24,10 @@ export function ContactBanner() {
           <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block text-sm font-bold tracking-[0.2em] uppercase text-[var(--primary)] mb-4">Get In Touch</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--foreground)] leading-tight">
                 Let&apos;s Talk Safety
               </h2>
-              <p className="mt-4 text-lg text-white/60">
+              <p className="mt-4 text-lg text-[var(--muted-foreground)]">
                 Get in touch for a free consultation and quote. We respond within 24 hours.
               </p>
 
@@ -56,14 +56,14 @@ export function ContactBanner() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3 }}
                 className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3"
-                style={{ background: "linear-gradient(135deg, rgba(26,26,46,0.8) 0%, rgba(15,15,26,0.9) 100%)" }}
+                style={{ background: "linear-gradient(135deg, rgba(237,231,255,0.8) 0%, rgba(221,213,245,0.9) 100%)" }}
               >
                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#25D366]/20 group-hover:bg-[#25D366] transition-all duration-200">
                   <MessageCircle className="h-5 w-5 sm:h-7 sm:w-7 text-[#25D366] group-hover:text-white transition-colors duration-200" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs text-white/60">WhatsApp</p>
-                  <p className="text-sm sm:text-base font-bold text-white">Chat Now</p>
+                  <p className="text-xs text-[var(--muted-foreground)]">WhatsApp</p>
+                  <p className="text-sm sm:text-base font-bold text-[var(--foreground)]">Chat Now</p>
                 </div>
               </motion.a>
               <motion.a
@@ -73,14 +73,14 @@ export function ContactBanner() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.05 }}
                 className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3"
-                style={{ background: "linear-gradient(135deg, rgba(26,26,46,0.8) 0%, rgba(15,15,26,0.9) 100%)" }}
+                style={{ background: "linear-gradient(135deg, rgba(237,231,255,0.8) 0%, rgba(221,213,245,0.9) 100%)" }}
               >
                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#E4405F]/20 group-hover:bg-[#E4405F] transition-all duration-200">
                   <Globe className="h-5 w-5 sm:h-7 sm:w-7 text-[#E4405F] group-hover:text-white transition-colors duration-200" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs text-white/60">Instagram</p>
-                  <p className="text-sm sm:text-base font-bold text-white break-all">@consultdave</p>
+                  <p className="text-xs text-[var(--muted-foreground)]">Instagram</p>
+                  <p className="text-sm sm:text-base font-bold text-[var(--foreground)] break-all">@consultdave</p>
                 </div>
               </motion.a>
               <motion.a
@@ -90,14 +90,14 @@ export function ContactBanner() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.1 }}
                 className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3"
-                style={{ background: "linear-gradient(135deg, rgba(26,26,46,0.8) 0%, rgba(15,15,26,0.9) 100%)" }}
+                style={{ background: "linear-gradient(135deg, rgba(237,231,255,0.8) 0%, rgba(221,213,245,0.9) 100%)" }}
               >
                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[var(--primary)]/20 group-hover:bg-[var(--primary)] transition-all duration-200">
                   <Phone className="h-5 w-5 sm:h-7 sm:w-7 text-[var(--primary)] group-hover:text-white transition-colors duration-200" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs text-white/60">Phone</p>
-                  <p className="text-sm sm:text-base font-bold text-white">+234 800 CONSULT</p>
+                  <p className="text-xs text-[var(--muted-foreground)]">Phone</p>
+                  <p className="text-sm sm:text-base font-bold text-[var(--foreground)]">+234 800 CONSULT</p>
                 </div>
               </motion.a>
               <motion.a
@@ -107,14 +107,14 @@ export function ContactBanner() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.15 }}
                 className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3"
-                style={{ background: "linear-gradient(135deg, rgba(26,26,46,0.8) 0%, rgba(15,15,26,0.9) 100%)" }}
+                style={{ background: "linear-gradient(135deg, rgba(237,231,255,0.8) 0%, rgba(221,213,245,0.9) 100%)" }}
               >
                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[var(--primary)]/20 group-hover:bg-[var(--primary)] transition-all duration-200">
                   <Mail className="h-5 w-5 sm:h-7 sm:w-7 text-[var(--primary)] group-hover:text-white transition-colors duration-200" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs text-white/60">Email</p>
-                  <p className="text-sm sm:text-base font-bold text-white break-all">hello@consultdave.com</p>
+                  <p className="text-xs text-[var(--muted-foreground)]">Email</p>
+                  <p className="text-sm sm:text-base font-bold text-[var(--foreground)] break-all">hello@consultdave.com</p>
                 </div>
               </motion.a>
             </div>

@@ -36,10 +36,10 @@ function AnimatedCounter({ target, suffix = "", prefix = "" }: { target: number;
 
 export function StatisticsSection() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden" style={{ background: "linear-gradient(135deg, var(--navy) 0%, #0f0f1a 100%)" }}>
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-[var(--section-alt)]">
       <div className="absolute inset-0 opacity-[0.04]">
-        <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-[#5555ff] blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-[#5555ff] blur-3xl" />
+        <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-[var(--primary)] blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-[var(--primary)] blur-3xl" />
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -52,10 +52,10 @@ export function StatisticsSection() {
                transition={{ duration: 0.35, delay: index * 0.08 }}
               className="text-center"
             >
-              <div className="text-4xl lg:text-5xl font-extrabold text-white">
+              <div className="text-4xl lg:text-5xl font-extrabold text-[var(--foreground)]">
                 <AnimatedCounter target={stat.value} suffix={stat.suffix} prefix={stat.prefix || ""} />
               </div>
-              <p className="mt-2 text-white/60 text-lg">{stat.label}</p>
+              <p className="mt-2 text-[var(--muted-foreground)] text-lg">{stat.label}</p>
             </motion.div>
           ))}
         </div>

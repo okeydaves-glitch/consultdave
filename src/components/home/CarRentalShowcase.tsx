@@ -13,7 +13,7 @@ const features = [
 
 export function CarRentalShowcase() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden" style={{ background: "linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%)" }}>
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-[var(--section-alt)]">
       <div className="absolute inset-0 opacity-[0.04]">
         <div className="absolute top-40 right-40 w-96 h-96 rounded-full bg-[var(--primary)] blur-3xl" />
         <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-[var(--primary)] blur-3xl" />
@@ -33,7 +33,7 @@ export function CarRentalShowcase() {
               <div
                 className="relative z-10 w-full aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl"
                 style={{
-                  background: "linear-gradient(135deg, #5555ff20 0%, #1a1a2e10 100%)",
+                  background: "linear-gradient(135deg, #ede7ff 0%, #ddd5f5 100%)",
                 }}
               >
                 <div className="w-full h-full flex items-center justify-center">
@@ -48,8 +48,8 @@ export function CarRentalShowcase() {
                 transition={{ duration: 0.25, delay: 0.15 }}
                 className="absolute bottom-0 right-0 rounded-2xl bg-[var(--primary)] px-4 sm:px-5 py-2 sm:py-3 shadow-xl"
               >
-                <p className="text-white text-sm font-bold">50+ Vehicles</p>
-                <p className="text-white/60 text-xs">Available Nationwide</p>
+                <p className="text-[var(--primary-foreground)] text-sm font-bold">50+ Vehicles</p>
+                <p className="text-[var(--primary-foreground)]/60 text-xs">Available Nationwide</p>
               </motion.div>
 
               <motion.div
@@ -57,7 +57,7 @@ export function CarRentalShowcase() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.25, delay: 0.25 }}
-                className="absolute top-4 left-4 rounded-2xl bg-white/10 backdrop-blur px-4 py-2 border border-white/10"
+                className="absolute top-4 left-4 rounded-2xl bg-[var(--card)]/80 backdrop-blur px-4 py-2 border border-[var(--border)]"
               >
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
@@ -76,10 +76,10 @@ export function CarRentalShowcase() {
             className="order-1 lg:order-2"
           >
             <span className="inline-block text-sm font-bold tracking-[0.2em] uppercase text-[var(--primary)] mb-4">Premium Fleet</span>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-[var(--foreground)] leading-tight">
               Experience Luxury On Wheels
             </h2>
-            <p className="mt-4 text-lg text-white/60">
+            <p className="mt-4 text-lg text-[var(--muted-foreground)]">
               Premium vehicles for your business travel. From luxury cars to spacious SUVs and buses, drive in comfort and style.
             </p>
 
@@ -91,14 +91,13 @@ export function CarRentalShowcase() {
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: i * 0.05 }}
-                  className="group rounded-2xl p-3 sm:p-4 transition-all duration-200"
-                  style={{ background: "linear-gradient(135deg, rgba(26,26,46,0.8) 0%, rgba(15,15,26,0.9) 100%)" }}
+                  className="group rounded-2xl p-3 sm:p-4 transition-all duration-200 bg-[var(--card)] shadow-sm"
                 >
                   <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-[var(--primary)]/20 group-hover:bg-[var(--primary)] transition-all duration-200 shrink-0">
                     <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-[var(--primary)] group-hover:text-white transition-colors duration-200" />
                   </div>
-                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm font-bold text-white">{item.label}</p>
-                  <p className="text-xs text-white/50">{item.desc}</p>
+                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm font-bold text-[var(--foreground)]">{item.label}</p>
+                  <p className="text-xs text-[var(--muted-foreground)]">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -119,7 +118,7 @@ export function CarRentalShowcase() {
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center h-14 px-10 rounded-full border border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-all duration-200"
+                className="inline-flex items-center justify-center h-14 px-10 rounded-full border border-[var(--border)] text-[var(--foreground)] font-bold text-sm hover:bg-[var(--muted)] transition-all duration-200"
               >
                 Request a Quote
               </Link>
@@ -130,9 +129,9 @@ export function CarRentalShowcase() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.25, delay: 0.3 }}
-              className="mt-6 pt-6 border-t border-white/10"
+              className="mt-6 pt-6 border-t border-[var(--border)]"
             >
-              <Link href="/equipment" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors duration-200 text-sm">
+              <Link href="/equipment" className="inline-flex items-center gap-2 text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors duration-200 text-sm">
                 <HardHat className="h-4 w-4" />
                 Also need safety equipment? Browse our industrial safety shop &rarr;
               </Link>
