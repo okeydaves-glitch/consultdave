@@ -13,7 +13,7 @@ const features = [
 
 export function CarRentalShowcase() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden" style={{ background: "var(--section-gradient-reverse)" }}>
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-section-gradient-reverse">
       <div className="absolute inset-0 opacity-[0.04]">
         <div className="absolute top-40 right-40 w-96 h-96 rounded-full bg-[var(--primary)] blur-3xl" />
         <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-[var(--primary)] blur-3xl" />
@@ -31,10 +31,7 @@ export function CarRentalShowcase() {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-64 h-64 rounded-full bg-[var(--primary)]/5 blur-3xl" />
               <div
-                className="relative z-10 w-full aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl"
-                style={{
-                  background: "linear-gradient(135deg, #ede7ff 0%, #ddd5f5 100%)",
-                }}
+                className="relative z-10 w-full aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl bg-card-gradient"
               >
                 <div className="w-full h-full flex items-center justify-center">
                   <Car className="w-48 h-48 text-[var(--primary)]/25" strokeWidth={1} />
@@ -91,7 +88,7 @@ export function CarRentalShowcase() {
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: i * 0.05 }}
-                  className="group rounded-2xl p-3 sm:p-4 transition-all duration-200" style={{ background: "var(--card-subtle)" }}
+                  className="group rounded-2xl p-3 sm:p-4 transition-all duration-200 bg-card-subtle"
                 >
                   <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-[var(--primary)]/20 group-hover:bg-[var(--primary)] transition-all duration-200 shrink-0">
                     <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-[var(--primary)] group-hover:text-white transition-colors duration-200" />

@@ -40,11 +40,7 @@ export function ServicesSection() {
               viewport={{ once: true }}
                transition={{ duration: 0.35, delay: index * 0.05 }}
               whileHover={{ y: -6 }}
-              className="group rounded-3xl p-8 transition-all duration-200 flex flex-col"
-              style={{
-                background: "var(--card-gradient)",
-                boxShadow: "var(--card-gradient-shadow)",
-              }}
+              className="group rounded-3xl p-8 transition-all duration-200 flex flex-col bg-card-gradient shadow-card-gradient"
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--primary)]/20 group-hover:bg-[var(--primary)] transition-all duration-200 shrink-0">
                 <service.icon className="h-7 w-7 text-[var(--primary)] group-hover:text-white transition-colors duration-200" />

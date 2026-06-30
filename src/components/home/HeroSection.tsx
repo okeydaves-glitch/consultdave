@@ -78,10 +78,7 @@ export function HeroSection() {
               initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.35, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-              className="relative z-10 w-full max-w-xl aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl rotate-[2deg] lg:rotate-[3deg]"
-              style={{
-                background: "var(--card-gradient)",
-              }}
+              className="relative z-10 w-full max-w-xl aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl rotate-[2deg] lg:rotate-[3deg] bg-card-gradient"
             >
               <div className="w-full h-full flex items-center justify-center">
                 <svg className="w-40 h-40 text-[var(--primary)]/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">

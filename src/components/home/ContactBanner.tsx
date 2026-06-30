@@ -12,12 +12,8 @@ export function ContactBanner() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
            transition={{ duration: 0.35 }}
-          className="rounded-[40px] p-6 sm:p-10 lg:p-16 relative overflow-hidden"
-          style={{
-            background: "var(--card-gradient)",
-            boxShadow: "var(--card-gradient-shadow)",
-          }}
-        >
+                     className="rounded-[40px] p-6 sm:p-10 lg:p-16 relative overflow-hidden bg-card-gradient shadow-card-gradient"
+          >
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#5555ff]/10 blur-3xl" />
           <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-[#5555ff]/5 blur-3xl" />
 
@@ -55,8 +51,7 @@ export function ContactBanner() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3 }}
-                className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3"
-                style={{ background: "var(--card-subtle)" }}
+                className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3 bg-card-subtle"
               >
                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#25D366]/20 group-hover:bg-[#25D366] transition-all duration-200">
                   <MessageCircle className="h-5 w-5 sm:h-7 sm:w-7 text-[#25D366] group-hover:text-white transition-colors duration-200" />
@@ -72,8 +67,7 @@ export function ContactBanner() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.05 }}
-                className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3"
-                style={{ background: "var(--card-subtle)" }}
+                className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3 bg-card-subtle"
               >
                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[#E4405F]/20 group-hover:bg-[#E4405F] transition-all duration-200">
                   <Globe className="h-5 w-5 sm:h-7 sm:w-7 text-[#E4405F] group-hover:text-white transition-colors duration-200" />
@@ -89,8 +83,7 @@ export function ContactBanner() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.1 }}
-                className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3"
-                style={{ background: "var(--card-subtle)" }}
+                className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3 bg-card-subtle"
               >
                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[var(--primary)]/20 group-hover:bg-[var(--primary)] transition-all duration-200">
                   <Phone className="h-5 w-5 sm:h-7 sm:w-7 text-[var(--primary)] group-hover:text-white transition-colors duration-200" />
@@ -106,8 +99,7 @@ export function ContactBanner() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.15 }}
-                className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3"
-                style={{ background: "var(--card-subtle)" }}
+                className="group rounded-2xl p-4 sm:p-6 transition-all duration-200 text-center flex flex-col items-center justify-center gap-2 sm:gap-3 bg-card-subtle"
               >
                 <div className="flex h-10 w-10 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-[var(--primary)]/20 group-hover:bg-[var(--primary)] transition-all duration-200">
                   <Mail className="h-5 w-5 sm:h-7 sm:w-7 text-[var(--primary)] group-hover:text-white transition-colors duration-200" />
