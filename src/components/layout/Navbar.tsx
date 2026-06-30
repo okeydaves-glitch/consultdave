@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { NavbarClient } from "./NavbarClient";
+import { Logo } from "@/components/shared/Logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -18,9 +19,7 @@ export async function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[var(--navbar-bg)] border-b border-[var(--border)]/50">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-12">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-extrabold text-[var(--primary)] tracking-tight">Consult Dave</span>
-        </Link>
+        <Logo href="/" size="md" />
 
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (

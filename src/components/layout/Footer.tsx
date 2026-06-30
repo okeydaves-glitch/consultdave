@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MessageCircle, Globe } from "lucide-react";
+import { Logo } from "@/components/shared/Logo";
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="text-2xl font-extrabold text-[#5555ff] tracking-tight">Consult Dave</h3>
+            <Logo href="/" size="lg" color="white" />
             <p className="mt-3 text-sm text-white/50 leading-relaxed">
               Your trusted partner for safety consultancy, equipment supply, and premium car rentals across Nigeria.
             </p>

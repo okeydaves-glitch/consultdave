@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/shared/Button";
 import { ShoppingCart, User, LogOut, Menu, X, ThumbsUp } from "lucide-react";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
+import { Logo } from "@/components/shared/Logo";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createClient } from "@/lib/supabase/client";
@@ -97,6 +98,9 @@ export function NavbarClient({ isLoggedIn }: NavbarClientProps) {
             className="absolute top-16 left-0 right-0 z-50 border-b border-[var(--border)] bg-[var(--card)] overflow-hidden md:hidden"
           >
             <nav className="flex flex-col p-4 gap-2">
+              <div className="px-3 py-2 mb-1">
+                <Logo href="/" size="sm" onClick={() => setMobileMenuOpen(false)} />
+              </div>
               {navLinks.map((link) => (
                 <MobileNavLink key={link.href} href={link.href} onClick={() => setMobileMenuOpen(false)}>
                   {link.label}

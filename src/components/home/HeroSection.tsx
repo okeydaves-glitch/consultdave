@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ThumbsUp, ShieldCheck } from "lucide-react";
 import { WaveDivider } from "@/components/shared/WaveDivider";
+import { Logo } from "@/components/shared/Logo";
 
 export function HeroSection() {
   return (
@@ -15,6 +16,14 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.25 }}
+              className="mb-6"
+            >
+              <Logo size="lg" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25, delay: 0.05 }}
               className="inline-flex items-center gap-2 rounded-full bg-[var(--primary)]/10 px-4 py-2 text-sm font-semibold text-[var(--primary)] mb-6"
             >
               <ShieldCheck className="h-4 w-4" />
