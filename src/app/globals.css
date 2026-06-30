@@ -2,22 +2,22 @@
 
 :root {
   --background: #f5f3ff;
-  --foreground: #000000;
+  --foreground: #2d1b69;
   --primary: #5555ff;
   --primary-foreground: #ffffff;
-  --secondary: #1a1a2e;
+  --secondary: #2d1b69;
   --accent: #5555ff;
   --muted: #eeebf8;
-  --muted-foreground: #5c5470;
+  --muted-foreground: #8a7bbf;
   --border: #ddd6f0;
   --destructive: #ef4444;
   --card: #ffffff;
-  --navy: #1a1a2e;
+  --navy: #2d1b69;
   --electric-blue: #5555ff;
   --navbar-bg: rgba(255, 255, 255, 0.9);
   --hero-bg: #ffffff;
   --section-alt: #f0edf9;
-  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow: rgba(45, 27, 105, 0.1);
 }
 
 .dark {
